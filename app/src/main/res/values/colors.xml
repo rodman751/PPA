@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="my_lighter_gray">#D3D3D3</color>
+    <color name="custom_lighter_gray">#D3D3D3</color>
+    <color name="my_divider_color">#D3D3D3</color> <!-- O el gris claro que prefieras -->
+
+    <!-- Colores base del tema -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#FF4081</color>
+
+    <!-- Variaciones del color primario para diferentes elementos -->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="divider">#BDBDBD</color>
+
+    <!-- Colores para fondos y tarjetas -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="list_item_background">#F5F5F5</color>
+
+    <!-- Colores para botones y acciones -->
+    <color name="button_primary">#1976D2</color>
+    <color name="button_secondary">#455A64</color>
+    <color name="button_danger">#E53935</color>
+    <color name="button_success">#43A047</color>
+
+    <!-- Colores para iconos y acentos visuales -->
+    <color name="icon_primary">#1976D2</color>
+    <color name="icon_secondary">#757575</color>
+
+    <!-- Colores para estados y notificaciones -->
+    <color name="state_active">#43A047</color>
+    <color name="state_pending">#FB8C00</color>
+    <color name="state_inactive">#757575</color>
+    <color name="state_error">#E53935</color>
+
+    <!-- Colores estándar -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

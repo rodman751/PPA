@@ -2,112 +2,163 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre del Proyecto:"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/editTextNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:text="Detalles del Proyecto"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:layout_marginBottom="24dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Descripción:"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/editTextDescripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fecha de Inicio:"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/editTextFechaInicio"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="YYYY-MM-DD" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del Proyecto"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fecha de Fin:"
-            android:textSize="16sp" />
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/editTextFechaFin"
+            <EditText
+                android:id="@+id/editTextDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:inputType="textMultiLine"
+                android:minLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/editTextFechaInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Inicio (YYYY-MM-DD)"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:hint="YYYY-MM-DD" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <Button
-            android:id="@+id/buttonGuardar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Guardar Proyecto" />
+            <EditText
+                android:id="@+id/editTextFechaFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Fin (YYYY-MM-DD)"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/buttonEliminar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Eliminar Proyecto"
-            android:layout_marginTop="8dp" />
-
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Actividades del Proyecto:"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
 
-        <ListView
-            android:id="@+id/listViewActividadesProyecto"
+            <Button
+                android:id="@+id/buttonGuardar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guardar Proyecto"
+                android:textAllCaps="false"
+                android:paddingVertical="12dp"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/buttonEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eliminar Proyecto"
+                android:textAllCaps="false"
+                android:paddingVertical="12dp"
+                android:backgroundTint="#E53935"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_marginBottom="16dp"
-            android:minHeight="100dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Avance del Proyecto:"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp">
 
-        <TextView
-            android:id="@+id/textViewAvanceProyecto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actividades del Proyecto"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:layout_marginBottom="12dp" />
+
+                <ListView
+                    android:id="@+id/listViewActividadesProyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:divider="@color/my_divider_color"
+                    android:dividerHeight="0.5dp"
+                    android:background="#F5F5F5"
+                    android:minHeight="100dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avance del Proyecto: "
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewAvanceProyecto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/design_default_color_primary" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabNuevaActividad"
@@ -118,8 +169,9 @@
             android:clickable="true"
             android:focusable="true"
             android:src="@android:drawable/ic_input_add"
-            app:layout_anchor="@id/listViewActividadesProyecto"
-            app:layout_anchorGravity="bottom|end" />
+            app:tint="@android:color/white"
+            app:backgroundTint="@color/design_default_color_primary"
+            app:elevation="6dp" />
 
     </LinearLayout>
 </ScrollView>
