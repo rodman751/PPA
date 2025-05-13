@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PPA</string>
+    <string-array name="estados_actividad">
+        <item>Planificado</item>
+        <item>En ejecución</item>
+        <item>Realizado</item>
+    </string-array>
+</resources>

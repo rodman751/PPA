@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la Actividad:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextNombreActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextDescripcionActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Inicio:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextFechaInicioActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="YYYY-MM-DD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Fin:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextFechaFinActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="YYYY-MM-DD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado:"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinnerEstadoActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:entries="@array/estados_actividad" /> <Button
+    android:id="@+id/buttonGuardarActividad"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Guardar Actividad" />
+
+    <Button
+        android:id="@+id/buttonEliminarActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Actividad"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> </LinearLayout>
